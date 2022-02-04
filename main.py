@@ -1,6 +1,8 @@
 import config
 import controller
 import hwrtc
+import network
+import web_server
 import wlan
 
 
@@ -14,6 +16,10 @@ def main():
     hwrtc.synchronize_hwrtc_ds3231()
 
     controller.register_pump_led_interrupt_handlers()
+    if config.wlan_ssid \
+            and config.wlan_password \
+            and wlan.wlan.status() == network.STAT_GOT_IP:
+        web_server.start_web_server()
 
 
 main()
