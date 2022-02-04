@@ -1,4 +1,5 @@
 import config
+import controller
 import hwrtc
 import wlan
 
@@ -11,6 +12,8 @@ def main():
     hwrtc.initialize_hwrtc()
     hwrtc.initialize_ds3231()
     hwrtc.synchronize_hwrtc_ds3231()
+
+    controller.register_pump_led_interrupt_handlers()
 
 
 main()
