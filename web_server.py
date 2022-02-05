@@ -56,4 +56,4 @@ def toggle_led_enable_handler(httpClient, httpResponse):
 
 def start_web_server():
     web_server = MicroWebSrv()
-    web_server.Start()
+    web_server.Start(threaded=True)
