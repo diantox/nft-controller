@@ -36,12 +36,12 @@ def debounce_pin(pin, milliseconds):
 
 
 def pump_interrupt_handler(pin):
-    debounce_pin(pin, 17)
+    # debounce_pin(pin, 17)
     toggle_pump_enable()
 
 
 def led_interrupt_handler(pin):
-    debounce_pin(pin, 17)
+    # debounce_pin(pin, 17)
     toggle_led_enable()
 
 
