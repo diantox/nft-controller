@@ -1,0 +1,10 @@
+# Sum Files
+/src/**.sum
+
+# Env Files
+/envs/**.env
+
+# Misc
+/pyboard_disconnected_tty_devices
+/pyboard_connected_tty_devices
+/new_tty_devices
